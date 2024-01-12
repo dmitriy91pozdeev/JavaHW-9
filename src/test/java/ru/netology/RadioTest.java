@@ -7,13 +7,13 @@ public class RadioTest {
     @Test
 
     public void turnUpTheVolume() {
-        Radio cond = new Radio();
-        cond.setCurrentVolume(100);
+        Radio radio = new Radio();
+        radio.setCurrentVolume(100);
 
-        cond.increaseVolume();
+        radio.increaseVolume();
 
         int expected = 100;
-        int actual = cond.getCurrentVolume();
+        int actual = radio.getCurrentVolume();
 
 
         Assertions.assertEquals(expected, actual);
@@ -22,13 +22,13 @@ public class RadioTest {
     @Test
 
     public void turnDownTheVolume() {
-        Radio cond = new Radio();
-        cond.setCurrentVolume(0);
+        Radio radio = new Radio();
+        radio.setCurrentVolume(0);
 
-        cond.decreaseVolume();
+        radio.decreaseVolume();
 
         int expected = 0;
-        int actual = cond.getCurrentVolume();
+        int actual = radio.getCurrentVolume();
 
 
         Assertions.assertEquals(expected, actual);
@@ -37,13 +37,13 @@ public class RadioTest {
     @Test
 
     public void changeToTheNextStation() {
-        Radio cound = new Radio();
-        cound.setCurrentRadioStation(9);
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(9);
 
-        cound.nextStation();
+        radio.nextStation();
 
         int expected = 0;
-        int actual = cound.getCurrentRadioStation();
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -51,13 +51,13 @@ public class RadioTest {
     @Test
 
     public void changeToThePreviousStation() {
-        Radio cound = new Radio();
-        cound.setCurrentRadioStation(0);
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(0);
 
-        cound.prevStation();
+        radio.prevStation();
 
         int expected = 9;
-        int actual = cound.getCurrentRadioStation();
+        int actual = radio.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
